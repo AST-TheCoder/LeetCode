@@ -2,7 +2,7 @@ class Solution {
 public:
     int cnt[1000001];
     int minOperations(vector<int>& nums) {
-        memset(cnt,0,sizeof(cnt));
+        for(int i=0;i<nums.size();i++) cnt[nums[i]] = 0;
         int c = 0, ans = 0;
         for(int i=0;i<nums.size();i++){
             cnt[nums[i]]++;
